@@ -10,17 +10,12 @@ def password_gen():
   special_characters = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~']
   combined_list = numbers + uppercase_letters + lowercase_letters + special_characters
   new = []
-############################################################
   q = input("password length: ")
-  #q = 10
-  #q = random.randint(20, 50)
-############################################################
   for i in range(int(q)):
     new.append(str(random.choice(combined_list)))
   password =  str(''.join(new))
   
   print("\nPassword of " + Fore.YELLOW + str(q) + Fore.WHITE + " characters is " + Fore.YELLOW + password + "\n")
-  # print("\n" + Fore.YELLOW + password + "\n")
 
 
 
