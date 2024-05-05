@@ -46,7 +46,7 @@ def geotag(image):
         print("Datetime:", datetime_obj)
         print("Device:", device)
     except Exception as e:
-        print(Fore.RED + "An error occurred while fetching geotag information:", e + Style.RESET_ALL)
+        print(Fore.RED + "No exif data found inside image." + Style.RESET_ALL)
 
 
 def embed(file, password, input_image, output):
