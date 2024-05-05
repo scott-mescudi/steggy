@@ -1,5 +1,0 @@
-colorama
-pycryptodome
-exifread
-random2
-Pillow
