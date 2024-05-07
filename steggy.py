@@ -45,7 +45,7 @@ def geotag(image):
         print("Longitude:", longitude)
         print("Datetime:", datetime_obj)
         print("Device:", device)
-    except Exception as e:
+    except:
         print(Fore.RED + "No exif data found inside image." + Style.RESET_ALL)
 
 
@@ -59,8 +59,8 @@ def embed(file, password, input_image, output):
             new_image_path=output
         )
         print(Fore.GREEN + "Embedding successful." + Style.RESET_ALL)
-    except Exception as e:
-        print(Fore.RED + "An error occurred while embedding data:", e + Style.RESET_ALL)
+    except:
+        print(Fore.RED + "An error occurred while embedding data:" + Style.RESET_ALL)
 
 
 def compress_directory(directory_path, zip_file_path):
@@ -122,7 +122,7 @@ def extract(password, image, output="extracted_data.txt"):
         data = aes256.decrypt_AES256(input, password)
         with open(output, "wb") as f:
             f.write(data)
-    except Exception:
+    except:
         print(Fore.RED + "An error occurred while decrypting data:" + Style.RESET_ALL)
 
 
